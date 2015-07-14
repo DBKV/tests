@@ -18,5 +18,12 @@ type Canvas struct {
 
 func NewCanvas(r image.Rectangle) *Canvas {
 	canvas := new(Canvas)
-	canvas.RGBA = 
+	canvas.RGBA = *image.NewRGBA(r)
+    return canvas
+}
+
+func (c Canvas)DrawGradient() {
+    size := c.Bounds().Size()
+
+    // Unfinished.
 }
